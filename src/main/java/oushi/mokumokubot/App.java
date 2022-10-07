@@ -16,5 +16,6 @@ public class App
                     .setRawEventsEnabled(true)
                     .setActivity(Activity.playing("もくもく監視中"))
                     .build();
+    		
     }
 }
