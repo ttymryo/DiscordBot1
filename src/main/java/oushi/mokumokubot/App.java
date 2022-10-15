@@ -5,6 +5,7 @@ import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder;
 import net.dv8tion.jda.api.sharding.ShardManager;
+import oushi.mokumokubot.listeners.EventListener;
 
 public class App 
 {
@@ -16,6 +17,8 @@ public class App
     	builder.setStatus(OnlineStatus.ONLINE);
     	builder.setActivity(Activity.watching("もくもく"));
     	shardManager = builder.build();
+    	
+    	shardManager.addEventListener(new EventListener());
     }
     
     public ShardManager getShardManager() {
