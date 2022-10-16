@@ -23,7 +23,7 @@ public class EventListener extends ListenerAdapter{
 	public void onMessageReceived(MessageReceivedEvent event) {
 		String message = event.getMessage().getContentRaw();
 		if (message.contains("ping")) {
-			event.getChannel().sendMessage("pong").queue();
+			((MessageChannel) event.getChannel()).sendMessage("pong").queue();
 		}
 	}
 	
